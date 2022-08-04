@@ -8,6 +8,10 @@
 
 </div>
 
+## Requirements 📦
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage 💻
 * The weather-Cli program must be located in the same directory as the script
