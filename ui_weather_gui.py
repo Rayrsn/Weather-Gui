@@ -15,11 +15,11 @@ from PySide2.QtWidgets import *  # type: ignore
 
 import images_rc
 
-import os,json,tempfile,random
+import os,json,tempfile,sys
 
 global tempdir
 # Generate a random file name
-tempdir = tempfile.gettempdir()+"/data{}.json".format(str(random.randint(1,10000)))
+tempdir = tempfile.gettempdir()+"/data-weather-gui.json"
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -392,7 +392,6 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        # print hello when searchbutton is clicked
         self.searchbutton.clicked.connect(self.getinfo)
         self.searchbar.returnPressed.connect(self.getinfo)
         
@@ -438,8 +437,10 @@ class Ui_MainWindow(object):
         jsonList = []
         jsonList.clear()
         with open(tempdir,'w') as f:
-                f.write(os.popen('weather-Cli get '+ self.searchbar.text() + ' --raw').read())
-                
+                if sys.platform == "win32":
+                        f.write(os.popen('.\\weather-Cli get '+ self.searchbar.text() + ' --raw').read())
+                else:
+                        f.write(os.popen('./weather-Cli get '+ self.searchbar.text() + ' --raw').read())
         with open (tempdir, "r") as f:
                 for jsonObj in f:
                         jsonDict = json.loads(jsonObj)
