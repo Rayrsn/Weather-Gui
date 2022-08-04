@@ -3,7 +3,7 @@
 # `🌦 Weather-GUI`
 ## **A GUI frontend for my other project [Weather-CLI](https://github.com/Rayrsn/Weather-Cli)**
  <p align="center">
-  <img width=70% height=70% src="https://github.com/Rayrsn/Weather-GUI/raw/main/cloud.gif?raw=true" alt="cloud.gif">
+  <img width=70% height=70% src="https://github.com/Rayrsn/Weather-GUI/raw/master/cloud.gif?raw=true" alt="cloud.gif">
 </p>
 
 </div>
