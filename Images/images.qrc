@@ -1,0 +1,56 @@
+<RCC>
+  <qresource prefix="MainGUI">
+    <file>search.png</file>
+    <file>temperature.png</file>
+    <file>wind.png</file>
+    <file>humidity2.png</file>
+    <file>humidity.png</file>
+    <file>country.png</file>
+    <file>city.png</file>
+    <file>population.png</file>
+  </qresource>
+  <qresource prefix="Icon">
+    <file>icon.gif</file>
+  </qresource>
+  <qresource prefix="Conditions">
+    <file>conditions/freezing-drizzle-dense.svg</file>
+    <file>conditions/freezing-drizzle-light.svg</file>
+    <file>conditions/freezing-rain-heavy.svg</file>
+    <file>conditions/freezing-rain-light.svg</file>
+    <file>conditions/rain-heavy.svg</file>
+    <file>conditions/rain-moderate.svg</file>
+    <file>conditions/rain-slight.svg</file>
+    <file>conditions/rime-fog.svg</file>
+    <file>conditions/showers-moderate.svg</file>
+    <file>conditions/showers-slight.svg</file>
+    <file>conditions/showers-violent.svg</file>
+    <file>conditions/snow-grains.svg</file>
+    <file>conditions/snow-heavy.svg</file>
+    <file>conditions/snow-moderate.svg</file>
+    <file>conditions/snow-showers-heavy.svg</file>
+    <file>conditions/snow-showers-slight.svg</file>
+    <file>conditions/snow-slight.svg</file>
+    <file>conditions/thunderstorm-hail-heavy.svg</file>
+    <file>conditions/thunderstorm-hail-light.svg</file>
+    <file>conditions/thunderstorm.svg</file>
+    <file>conditions/cloudy.svg</file>
+  </qresource>
+  <qresource prefix="Conditions-Time-Based">
+    <file>conditions/timebased/clear-day.svg</file>
+    <file>conditions/timebased/clear-night.svg</file>
+    <file>conditions/timebased/drizzle-dense-day.svg</file>
+    <file>conditions/timebased/drizzle-dense-night.svg</file>
+    <file>conditions/timebased/drizzle-light-day.svg</file>
+    <file>conditions/timebased/drizzle-light-night.svg</file>
+    <file>conditions/timebased/drizzle-moderate-day.svg</file>
+    <file>conditions/timebased/drizzle-moderate-night.svg</file>
+    <file>conditions/timebased/fog-day.svg</file>
+    <file>conditions/timebased/fog-night.svg</file>
+    <file>conditions/timebased/mainlyclear-day.svg</file>
+    <file>conditions/timebased/mainlyclear-night.svg</file>
+    <file>conditions/timebased/overcast-day.svg</file>
+    <file>conditions/timebased/overcast-night.svg</file>
+    <file>conditions/timebased/partlycloudy-day.svg</file>
+    <file>conditions/timebased/partlycloudy-night.svg</file>
+  </qresource>
+</RCC>
