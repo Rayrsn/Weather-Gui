@@ -125,10 +125,11 @@ class Ui_MainWindow(object):
         self.humidicontext.setScaledContents(True)
         self.weathercondtext = QLabel(self.topframe)
         self.weathercondtext.setObjectName(u"weathercondtext")
-        self.weathercondtext.setGeometry(QRect(134, 169, 136, 41))
+        self.weathercondtext.setGeometry(QRect(118, 140, 167, 97))
         font3 = QFont()
-        font3.setPointSize(20)
+        font3.setPointSize(17)
         self.weathercondtext.setFont(font3)
+        self.weathercondtext.setWordWrap(True)
         self.weathercondtext.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
 "background-color: transparent;\n"
