@@ -433,6 +433,9 @@ class Ui_MainWindow(object):
         MainWindow.setFixedSize(MainWindow.size())
     # retranslateUi
 
+    def changeweathercondtext(self,condition):
+        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+condition+"</p></body></html>", None))
+
     def getinfo(self):
         jsonList = []
         jsonList.clear()
@@ -468,110 +471,110 @@ class Ui_MainWindow(object):
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/clear-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/clear-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Clear Sky</p></body></html>", None))
+                        self.changeweathercondtext("Clear Sky")
                 case 1:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/mainlyclear-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/mainlyclear-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Mainly Clear</p></body></html>", None))
+                        self.changeweathercondtext("Mainly Clear")
                 case 2:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/partlycloudy-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/partlycloudy-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Partly Cloudy</p></body></html>", None))
+                        self.changeweathercondtext("Partly Cloudy")
                 case 3:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/overcast-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/overcast-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Overcast</p></body></html>", None))
+                        self.changeweathercondtext("Overcast")
                 case 45:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/fog-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/fog-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Fog</p></body></html>", None))
+                        self.changeweathercondtext("Fog")
 
                 case 48:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/rime-fog.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Depositing Rime Fog</p></body></html>", None))
+                        self.changeweathercondtext("Depositing Rime Fog")
 
                 case 51:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/drizzle-light-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/drizzle-light-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Light Drizzle</p></body></html>", None))
+                        self.changeweathercondtext("Light Drizzle")
                 case 53:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/drizzle-moderate-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/drizzle-moderate-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Moderate Drizzle</p></body></html>", None))
+                        self.changeweathercondtext("Moderate Drizzle")
                 case 55:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/drizzle-dense-night.png"))
                         else:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/drizzle-dense-day.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Dense Drizzle</p></body></html>", None))
+                        self.changeweathercondtext("Dense Drizzle")
 
                 case 56:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/freezing-drizzle-light.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Light Freezing Drizzle</p></body></html>", None))
+                        self.changeweathercondtext("Light Freezing Drizzle")
                 case 57:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/freezing-drizzle-dense.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Dense Freezing Drizzle</p></body></html>", None))
+                        self.changeweathercondtext("Dense Freezing Drizzle")
                 case 61:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/rain-slight.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Slight Rain</p></body></html>", None))
+                        self.changeweathercondtext("Slight Rain")
                 case 63:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/rain-moderate.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Moderate Rain</p></body></html>", None))
+                        self.changeweathercondtext("Moderate Rain")
                 case 65:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/rain-heavy.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Heavy Rain</p></body></html>", None))
+                        self.changeweathercondtext("Heavy Rain")
                 case 66:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/freezing-rain-light.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Light Freezing Rain</p></body></html>", None))
+                        self.changeweathercondtext("Light Freezing Rain")
                 case 67:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/freezing-rain-heavy.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Heavy Freezing Rain</p></body></html>", None))
+                        self.changeweathercondtext("Heavy Freezing Rain")
                 case 71:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/snow-slight.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Slight Snow Fall</p></body></html>", None))
+                        self.changeweathercondtext("Slight Snow Fall")
                 case 73:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/snow-moderate.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Moderate Snow Fall</p></body></html>", None))
+                        self.changeweathercondtext("Moderate Snow Fall")
                 case 75:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/snow-heavy.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Heavy Snow Fall</p></body></html>", None))
+                        self.changeweathercondtext("Heavy Snow Fall")
                 case 77:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/snow-grains.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Snow Grains</p></body></html>", None))
+                        self.changeweathercondtext("Snow Grains")
                 case 80:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/showers-slight.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Slight Rain Showers</p></body></html>", None))
+                        self.changeweathercondtext("Slight Rain Showers")
                 case 81:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/showers-moderate.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Moderate Rain Showers</p></body></html>", None))
+                        self.changeweathercondtext("Moderate Rain Showers")
                 case 82:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/showers-violent.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Violent Rain Showers</p></body></html>", None))
+                        self.changeweathercondtext("Violent Rain Showers")
                 case 85:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/snow-showers-slight.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Slight Snow Showers</p></body></html>", None))
+                        self.changeweathercondtext("Slight Snow Showers")
                 case 86:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/snow-showers-heavy.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Heavy Snow Showers</p></body></html>", None))
+                        self.changeweathercondtext("Heavy Snow Showers")
                 case 95:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/thunderstorm.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Thunderstorm</p></body></html>", None))
+                        self.changeweathercondtext("Thunderstorm")
                 case 96:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/thunderstorm-hail-light.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Thunderstorm With Light Hail</p></body></html>", None))
+                        self.changeweathercondtext("Thunderstorm With Light Hail")
                 case 99:
                         self.weatherconicon.setPixmap(QPixmap(u":/Conditions/conditions/thunderstorm-hail-heavy.png"))
-                        self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Thunderstorm With Heavy Hail</p></body></html>", None))
+                        self.changeweathercondtext("Thunderstorm With Heavy Hail")
 
