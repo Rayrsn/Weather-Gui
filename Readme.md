@@ -14,7 +14,9 @@ pip install -r requirements.txt
 ```
 
 ## Usage 💻
-* The weather-Cli program must be located in the same directory as the script
+### The weather-Cli program must be located in the same directory as the script
+### To get info about building the weather-Cli program visit [my other repo](https://github.com/Rayrsn/Weather-Cli).
+
 ```bash
 python main.py
 ```
