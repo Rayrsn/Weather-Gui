@@ -21,7 +21,6 @@ python main.py
 
 
 ## Acknowledgments and FAQ 📚
-### The weather condition icons aren't implemented yet.
 For details about the API used please visit my other project, [Weather-CLI](https://github.com/Rayrsn/Weather-Cli).
 
 * Icons used:
