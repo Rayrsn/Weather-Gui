@@ -2,3 +2,4 @@ __pycache__
 .qt_for_python
 weather-Cli
 Images/conditions-old
+tester.py
