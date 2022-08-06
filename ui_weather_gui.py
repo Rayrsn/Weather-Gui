@@ -461,7 +461,8 @@ class Ui_MainWindow(object):
         self.pressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["surface_pressure"],2))+" hPa"+"</p></body></html>", None))
         self.winddirectionvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(jsonList[1]["current_weather"]["winddirection"])+"°"+"</p></body></html>", None))
         self.windspeedvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(jsonList[1]["current_weather"]["windspeed"])+" km/h"+"</p></body></html>", None))
-        match jsonList[1]["current_weather"]["windspeed"]:
+        
+        match jsonList[1]["current_weather"]["weathercode"]:
                 case 0:
                         if time.localtime().tm_hour < 6 or time.localtime().tm_hour > 18:
                                 self.weatherconicon.setPixmap(QPixmap(u":/Conditions-Time-Based/conditions/timebased/clear-night.png"))
