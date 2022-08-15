@@ -55,6 +55,11 @@ class Ui_MainWindow(object):
         self.line_4.setGeometry(QRect(285, 2, 1, 234))
         self.line_4.setFrameShape(QFrame.VLine)
         self.line_4.setFrameShadow(QFrame.Sunken)
+        self.line_5 = QFrame(self.topframe)
+        self.line_5.setObjectName(u"line_5")
+        self.line_5.setGeometry(QRect(285, 141, 117, 1))
+        self.line_5.setFrameShape(QFrame.HLine)
+        self.line_5.setFrameShadow(QFrame.Sunken)
         self.weatherconicon = QLabel(self.topframe)
         self.weatherconicon.setObjectName(u"weatherconicon")
         self.weatherconicon.setGeometry(QRect(134, 14, 136, 127))
@@ -94,7 +99,7 @@ class Ui_MainWindow(object):
 "")
         self.humidicon = QLabel(self.topframe)
         self.humidicon.setObjectName(u"humidlabelicon")
-        self.humidicon.setGeometry(QRect(308, 30, 70, 70))
+        self.humidicon.setGeometry(QRect(322, 30, 50, 50))
         self.humidicon.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
 "background-color: transparent;")
@@ -102,7 +107,7 @@ class Ui_MainWindow(object):
         self.humidicon.setScaledContents(True)
         self.humidvalue = QLabel(self.topframe)
         self.humidvalue.setObjectName(u"humidlabel")
-        self.humidvalue.setGeometry(QRect(285, 160, 118, 40))
+        self.humidvalue.setGeometry(QRect(285, 91, 118, 40))
         font1 = QFont()
         font1.setFamily(u"Arial")
         font1.setPointSize(12)
@@ -114,7 +119,7 @@ class Ui_MainWindow(object):
 "")
         self.humidicontext = QLabel(self.topframe)
         self.humidicontext.setObjectName(u"humidlabelicontext")
-        self.humidicontext.setGeometry(QRect(360, 162, 30, 30))
+        self.humidicontext.setGeometry(QRect(360, 93, 30, 30))
         font2 = QFont()
         font2.setPointSize(10)
         self.humidicontext.setFont(font2)
@@ -146,11 +151,27 @@ class Ui_MainWindow(object):
 "border-radius: 0px;\n"
 "background-color: transparent;\n"
 "")
-        self.reelfeelvalue = QLabel(self.topframe)
-        self.reelfeelvalue.setObjectName(u"reelfeelvalue")
-        self.reelfeelvalue.setGeometry(QRect(0, 190, 118, 20))
-        self.reelfeelvalue.setFont(font1)
-        self.reelfeelvalue.setStyleSheet(u"border: 0px solid white;\n"
+        self.realfeelvalue = QLabel(self.topframe)
+        self.realfeelvalue.setObjectName(u"reelfeelvalue")
+        self.realfeelvalue.setGeometry(QRect(0, 190, 118, 20))
+        self.realfeelvalue.setFont(font1)
+        self.realfeelvalue.setStyleSheet(u"border: 0px solid white;\n"
+"border-radius: 0px;\n"
+"background-color: transparent;\n"
+"")
+        self.uvindex = QLabel(self.topframe)
+        self.uvindex.setObjectName(u"uvindex")
+        self.uvindex.setGeometry(QRect(299, 142, 91, 31))
+        self.uvindex.setFont(font4)
+        self.uvindex.setStyleSheet(u"border: 0px solid white;\n"
+"border-radius: 0px;\n"
+"background-color: transparent;\n"
+"")
+        self.uvindexvalue = QLabel(self.topframe)
+        self.uvindexvalue.setObjectName(u"uvindexvalue")
+        self.uvindexvalue.setGeometry(QRect(315, 190, 55, 18))
+        self.uvindexvalue.setFont(font1)
+        self.uvindexvalue.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
 "background-color: transparent;\n"
 "")
@@ -245,16 +266,16 @@ class Ui_MainWindow(object):
         self.locationinfo.setFrameShape(QFrame.StyledPanel)
         self.locationinfo.setFrameShadow(QFrame.Raised)
         self.latitude = QLabel(self.locationinfo)
-        self.latitude.setObjectName(u"longitude")
-        self.latitude.setGeometry(QRect(30, 20, 121, 40))
+        self.latitude.setObjectName(u"latitude")
+        self.latitude.setGeometry(QRect(30, 8, 121, 40))
         self.latitude.setFont(font1)
         self.latitude.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
 "background-color: transparent;\n"
 "")
         self.longitude = QLabel(self.locationinfo)
-        self.longitude.setObjectName(u"longitude2")
-        self.longitude.setGeometry(QRect(30, 75, 121, 40))
+        self.longitude.setObjectName(u"longitude")
+        self.longitude.setGeometry(QRect(30, 53, 121, 40))
         self.longitude.setFont(font1)
         self.longitude.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
@@ -262,7 +283,7 @@ class Ui_MainWindow(object):
 "")
         self.pressure = QLabel(self.locationinfo)
         self.pressure.setObjectName(u"pressure")
-        self.pressure.setGeometry(QRect(30, 130, 121, 40))
+        self.pressure.setGeometry(QRect(30, 98, 121, 40))
         self.pressure.setFont(font1)
         self.pressure.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
@@ -270,15 +291,32 @@ class Ui_MainWindow(object):
 "")
         self.latitudevalue = QLabel(self.locationinfo)
         self.latitudevalue.setObjectName(u"longitudevalue")
-        self.latitudevalue.setGeometry(QRect(130, 20, 93, 40))
+        self.latitudevalue.setGeometry(QRect(130, 8, 93, 40))
         self.latitudevalue.setFont(font1)
         self.latitudevalue.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
 "background-color: transparent;\n"
 "")
+        self.sealevelpressure = QLabel(self.locationinfo)
+        self.sealevelpressure.setObjectName(u"sealevelpressure")
+        self.sealevelpressure.setGeometry(QRect(30, 143, 121, 40))
+        self.sealevelpressure.setFont(font1)
+        self.sealevelpressure.setStyleSheet(u"border: 0px solid white;\n"
+"border-radius: 0px;\n"
+"background-color: transparent;\n"
+"")
+        self.sealevelpressure.setWordWrap(True)
+        self.sealevelpressurevalue = QLabel(self.locationinfo)
+        self.sealevelpressurevalue.setObjectName(u"sealevelpressurevalue")
+        self.sealevelpressurevalue.setGeometry(QRect(130, 143, 93, 40))
+        self.sealevelpressurevalue.setFont(font1)
+        self.sealevelpressurevalue.setStyleSheet(u"border: 0px solid white;\n"
+"border-radius: 0px;\n"
+"background-color: transparent;\n"
+"")
         self.pressurevalue = QLabel(self.locationinfo)
         self.pressurevalue.setObjectName(u"pressurevalue")
-        self.pressurevalue.setGeometry(QRect(130, 130, 93, 40))
+        self.pressurevalue.setGeometry(QRect(130, 98, 93, 40))
         self.pressurevalue.setFont(font1)
         self.pressurevalue.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
@@ -286,7 +324,7 @@ class Ui_MainWindow(object):
 "")
         self.longitudevalue = QLabel(self.locationinfo)
         self.longitudevalue.setObjectName(u"longitude2value")
-        self.longitudevalue.setGeometry(QRect(130, 75, 93, 40))
+        self.longitudevalue.setGeometry(QRect(130, 53, 93, 40))
         self.longitudevalue.setFont(font1)
         self.longitudevalue.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
@@ -404,9 +442,11 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Weather-GUI", None))
         self.tempvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">N/A</span></p></body></html>", None))
         self.humidvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
+        self.uvindex.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">UV Index</p></body></html>", None))
+        self.uvindexvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
         self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Clear</p></body></html>", None))
         self.realfeel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Real Feel</p></body></html>", None))
-        self.reelfeelvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
+        self.realfeelvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
         self.cityicon.setText("")
         self.cityvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">city</p></body></html>", None))
         self.countryicon.setText("")
@@ -420,6 +460,8 @@ class Ui_MainWindow(object):
         self.latitudevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
         self.longitudevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
         self.pressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A hPa</p></body></html>", None))
+        self.sealevelpressure.setText(QCoreApplication.translate("MainWindow", u"Sealevel Pressure", None))
+        self.sealevelpressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A hPa</p></body></html>", None))
         self.windicon.setText("")
         self.winddirection.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Direction</p></body></html>", None))
         self.winddirectionvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
@@ -458,10 +500,13 @@ class Ui_MainWindow(object):
 
         self.tempvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">"+str(jsonList[1]["current_weather"]["temperature"])+"°C"+"</span></p></body></html>", None))
         self.humidvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["relativehumidity_2m"],2))+"</p></body></html>", None))
-        self.reelfeelvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["apparent_temperature"],1))+"°C"+"</p></body></html>", None))
+        self.realfeelvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["apparent_temperature"],1))+"°C"+"</p></body></html>", None))
         self.pressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["surface_pressure"],2))+" hPa"+"</p></body></html>", None))
+        self.sealevelpressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["pressure_msl"],2))+" hPa"+"</p></body></html>", None))
+        
         self.winddirectionvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(jsonList[1]["current_weather"]["winddirection"])+"°"+"</p></body></html>", None))
         self.windspeedvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(jsonList[1]["current_weather"]["windspeed"])+" km/h"+"</p></body></html>", None))
+        self.uvindexvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[2]["hourly"]["uv_index"],1))+"</p></body></html>", None))
         
         match jsonList[1]["current_weather"]["weathercode"]:
                 case 0:
