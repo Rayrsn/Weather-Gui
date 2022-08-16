@@ -3,7 +3,7 @@
 # `🌦 Weather-Gui`
 ## **A GUI frontend for my other project [Weather-CLI](https://github.com/Rayrsn/Weather-Cli)**
  <p align="center">
-  <img src="https://github.com/Rayrsn/Weather-GUI/raw/master/Screenshot.png?raw=true" alt="Screenshot" style="border-radius:10px">
+  <img src="https://github.com/Rayrsn/Weather-GUI/raw/master/Screenshot.png?raw=true" alt="Screenshot">
 </p>
 </div>
 
