@@ -3,9 +3,8 @@
 # `🌦 Weather-Gui`
 ## **A GUI frontend for my other project [Weather-CLI](https://github.com/Rayrsn/Weather-Cli)**
  <p align="center">
-  <img width=40% height=40% src="https://github.com/Rayrsn/Weather-GUI/raw/master/cloud.gif?raw=true" alt="cloud.gif">
+  <img src="https://github.com/Rayrsn/Weather-GUI/raw/master/Screenshot.png?raw=true" alt="Screenshot" style="border-radius:10px">
 </p>
-
 </div>
 
 ## Requirements 📦
