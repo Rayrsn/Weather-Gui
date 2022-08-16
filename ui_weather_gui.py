@@ -107,11 +107,12 @@ class Ui_MainWindow(object):
         self.humidicon.setScaledContents(True)
         self.humidvalue = QLabel(self.topframe)
         self.humidvalue.setObjectName(u"humidlabel")
-        self.humidvalue.setGeometry(QRect(285, 91, 118, 40))
-        font1 = QFont()
-        font1.setFamily(u"Arial")
-        font1.setPointSize(12)
-        font1.setBold(True)
+        self.humidvalue.setGeometry(QRect(290, 90, 118, 40))
+        global font7
+        font7 = QFont()
+        font7.setFamily(u"Arial")
+        font7.setPointSize(15)
+        font7.setBold(True)
         self.humidvalue.setFont(font1)
         self.humidvalue.setStyleSheet(u"border: 0px solid white;\n"
 "border-radius: 0px;\n"
@@ -119,7 +120,7 @@ class Ui_MainWindow(object):
 "")
         self.humidicontext = QLabel(self.topframe)
         self.humidicontext.setObjectName(u"humidlabelicontext")
-        self.humidicontext.setGeometry(QRect(360, 93, 30, 30))
+        self.humidicontext.setGeometry(QRect(353, 93, 30, 30))
         font2 = QFont()
         font2.setPointSize(10)
         self.humidicontext.setFont(font2)
@@ -128,6 +129,7 @@ class Ui_MainWindow(object):
 "background-color: transparent;")
         self.humidicontext.setPixmap(QPixmap(u":/MainGUI/humidity2.png"))
         self.humidicontext.setScaledContents(True)
+        self.humidicontext.hide()
         self.weathercondtext = QLabel(self.topframe)
         self.weathercondtext.setObjectName(u"weathercondtext")
         self.weathercondtext.setGeometry(QRect(118, 140, 167, 97))
@@ -443,7 +445,7 @@ class Ui_MainWindow(object):
         self.tempvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">N/A</span></p></body></html>", None))
         self.humidvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
         self.uvindex.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">UV Index</p></body></html>", None))
-        self.uvindexvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
+        self.uvindexvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+"​ ​ ​ ​"+"N/A</p></body></html>", None))
         self.weathercondtext.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Clear</p></body></html>", None))
         self.realfeel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Real Feel</p></body></html>", None))
         self.realfeelvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">N/A</p></body></html>", None))
@@ -499,14 +501,15 @@ class Ui_MainWindow(object):
         self.populationvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str("{:,}".format(jsonList[0]["population"]))+"</p></body></html>", None))
 
         self.tempvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">"+str(jsonList[1]["current_weather"]["temperature"])+"°C"+"</span></p></body></html>", None))
-        self.humidvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["relativehumidity_2m"],2))+"</p></body></html>", None))
+        self.humidvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["relativehumidity_2m"],2))+"%"+"</p></body></html>", None))
+        self.humidvalue.setFont(font7)
         self.realfeelvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["apparent_temperature"],1))+"°C"+"</p></body></html>", None))
         self.pressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["surface_pressure"],2))+" hPa"+"</p></body></html>", None))
         self.sealevelpressurevalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[1]["hourly"]["pressure_msl"],2))+" hPa"+"</p></body></html>", None))
         
         self.winddirectionvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(jsonList[1]["current_weather"]["winddirection"])+"°"+"</p></body></html>", None))
         self.windspeedvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(jsonList[1]["current_weather"]["windspeed"])+" km/h"+"</p></body></html>", None))
-        self.uvindexvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+str(round(jsonList[2]["hourly"]["uv_index"],1))+"</p></body></html>", None))
+        self.uvindexvalue.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">"+" ​ ​ ​"+str(round(jsonList[2]["hourly"]["uv_index"],1))+"</p></body></html>", None))
         
         match jsonList[1]["current_weather"]["weathercode"]:
                 case 0:
